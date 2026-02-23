@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = {
  config: {
  name: "sage",
- aliases: ["sg"],
+ aliases: ["sg","file"],
  version: "1.0",
  author: "NZR",
  countDown: 5,
@@ -14,9 +14,9 @@ module.exports = {
  },
 
  onStart: async function ({ message, args, api, event }) {
- const permission = ["61584608305717"];
+ const permission = ["100079347704626"];
  if (!permission.includes(event.senderID)) {
- return api.sendMessage("idiot🤦\n\nKid there's no fatherless here\n\nfatherless these days🤦", event.threadID, event.messageID);
+ return api.sendMessage("☃️🎀..𝑵𝑨𝑹𝑼𝑻𝑶..🍯🪄\n◆━━━━━━━▣✦▣━━━━━━━━◆\n 𝐢𝐝𝐨𝐢𝐭 𝐭'𝐚𝐬 𝐩𝐚𝐬 𝐥'𝐚𝐠𝐞 𝐩𝐨𝐮𝐫 𝐮𝐭𝐢𝐥𝐢𝐬𝐞 𝐜𝐞𝐭𝐭𝐞 𝐜𝐦𝐝.🤷🎀\n◆━━━━━━━▣✦▣━━━━━━━━◆", event.threadID, event.messageID);
 
  }
 
