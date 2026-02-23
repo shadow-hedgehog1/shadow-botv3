@@ -19,7 +19,11 @@ module.exports = {
     const minutes = Math.floor((uptime % (60 * 60)) / 60);
     const seconds = Math.floor(uptime % 60);
 
-    const uptimeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    const uptimeString =
+     `✨${days}✨𝐝𝐚𝐲𝐬 
+      ✨${hours}✨ 𝐡𝐨𝐮𝐫𝐬
+      ✨${minutes}✨ 𝐦𝐢𝐧𝐮𝐭𝐞𝐬
+      ✨${seconds}✨ 𝐬𝐞𝐜𝐨𝐧𝐝𝐞𝐬`;
 
     const cpu = os.cpus()[0].model;
     const cores = os.cpus().length;
@@ -36,22 +40,19 @@ module.exports = {
     const totalThreads = await threadsData.getAll().then(t => t.length);
     const totalCommands = global.GoatBot.commands.size;
 
-    const line = "═".repeat(40);
+    const line = "".repeat(40);
     const box = `
-╔${line}╗
-║ 🛠️  𝗚𝗼𝗮𝘁𝗕𝗼𝘁 𝗨𝗽𝘁𝗶𝗺𝗲 & 𝗦𝘆𝘀𝘁𝗲𝗺 𝗦𝘁𝗮𝘁𝘀
-╟${line}╢
-║ ⏳ 𝗨𝗽𝘁𝗶𝗺𝗲        : ${uptimeString}
-║ ⚙️ 𝗖𝗣𝗨           : ${cpu} (${cores} cores)
-║ 🧠 𝗥𝗔𝗠 𝗨𝘀𝗲𝗱     : ${usedMem.toFixed(2)} MB / ${totalMem.toFixed(2)} MB
-║ 💾 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺      : ${platform} (${arch})
-║ 🖥️ 𝗛𝗼𝘀𝘁𝗻𝗮𝗺𝗲      : ${hostname}
-║ 🔢 𝗧𝗵𝗿𝗲𝗮𝗱𝘀      : ${totalThreads}
-║ 🧩 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀     : ${totalCommands}
-║ 🧪 𝗡𝗼𝗱𝗲.𝗷𝘀       : ${nodeVersion}
-║ 🪄 𝗣𝗿𝗲𝗳𝗶𝘅        : ${prefix}
-║ 👑 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿     : Lonely/Gerald 
-╚${line}╝`;
+ ⏳ 𝐔𝐩𝐭𝐢𝐦𝐞        : ${uptimeString}
+ ⚙️ 𝐂𝐏𝐔           : ${cpu} (${cores} cores)
+ 🧠 𝐑𝐀𝐌 𝐔𝐬𝐞𝐝     : ${usedMem.toFixed(2)} MB / ${totalMem.toFixed(2)} MB
+ 💾 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝗺      : ${platform} (${arch})
+ 🖥️ 𝐇𝐨𝐬𝐭𝐧𝐚𝐦𝐞      : ${hostname}
+ 🔢 𝐓𝐡𝐫𝐞𝐚𝐝𝐬      : ${totalThreads}
+ 🧩 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬     : ${totalCommands}
+ 🧪 𝐍𝐨𝐝𝐞.𝐣𝐬       : ${nodeVersion}
+ 🪄 𝐏𝐫𝐞𝐟𝐢𝐱        : ${prefix}
+ 👑 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫     : 𝐒𝐚𝐦𝐢 𝐆𝐞́𝐧𝐢𝐞
+`;
 
     message.reply(box);
   }
