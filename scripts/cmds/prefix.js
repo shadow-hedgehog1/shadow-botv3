@@ -1,4 +1,4 @@
-const fs = require("fs-extra");
+ const fs = require("fs-extra");
 const { utils } = global;
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "☃️🎀..𝑵𝑨𝑹𝑼𝑻𝑼..🍯🪄\n◆━━━━━━━▣✦▣━━━━━━━━◆\n 𝐒𝐲𝐬𝐭𝐞𝐦 𝐩𝐫𝐞𝐟𝐢𝐱: %1\n◆━━━━━━━▣✦▣━━━━━━━━◆\n 𝐘𝐨𝐮𝐫 𝐛𝐨𝐭 𝐜𝐡𝐚𝐭 𝐩𝐫𝐞𝐟𝐢𝐱: %2"\n◆━━━━━━━▣✦▣━━━━━━━━◆
+			myPrefix: "🎀 𝐒𝐲𝐬𝐭𝐞𝐦 𝐩𝐫𝐞𝐟𝐢𝐱: %1\n🎀 𝐘𝐨𝐮𝐫 𝐛𝐨𝐭 𝐜𝐡𝐚𝐭 𝐩𝐫𝐞𝐟𝐢𝐱: %2"
 		}
 	},
 
